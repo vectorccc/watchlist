@@ -9,7 +9,7 @@ def hello():
     return "Welcome to My Watchlist!"
 
 
-name = "Grey Li"
+name = "chh"
 movies = [
     {"title": "My Neighbor Totoro", "year": "1988"},
     {"title": "Dead Poets Society", "year": "1989"},
