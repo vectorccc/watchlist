@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,4 +29,23 @@
     </footer>
 </body>
 
-</html>
+</html> -->
+
+
+
+{% extends 'base.html' %}
+{% block content %}
+<p>{{ movies|length }} Titles</p>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>{{ movie.title }} - {{ movie.year }}
+        <span class="float-right">
+            <a class="douban" href="https://search.douban.com/movie/subject_search?search_text={{movie.title }}"
+                target="_blank" title="Find this movie on douban">
+                豆瓣</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+<img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}" title="to~to~ro~">
+{% endblock %}
